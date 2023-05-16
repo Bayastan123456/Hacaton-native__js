@@ -27,5 +27,8 @@
   font-family: "Lexend Exa", sans-serif;
   font-weight: bolder;
   font-size: 250px;
-  line-height: 250px;
+}
+
+.container {
+  margin: 0 auto;
 }
