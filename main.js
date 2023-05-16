@@ -17,6 +17,11 @@ let container = document.querySelector(".container");
 let btnSave = document.querySelector(".add-modal");
 let btnClose = document.querySelector(".close-modal");
 
+let previous = document.querySelector(".previous");
+let next = document.querySelector(".next");
+let currentPage = 1;
+let pageTotalCount = 1;
+
 btnCreate.addEventListener("click", async function () {
   if (!name.value.trim() || !number.value.trim()) {
     alert("Заполните поля");
@@ -42,14 +47,18 @@ btnCreate.addEventListener("click", async function () {
 });
 
 async function render() {
-  let fotbolka = await fetch(`${API}?q=${searchVal}`)
+  let fotbolka = await fetch(
+    `${API}?q=${searchVal}&_page=${currentPage}&_limit=3`
+  )
     .then((res) => res.json())
     .catch((err) => console.log(err));
+  drawPaginationButtons();
   list.innerHTML = "";
   console.log(fotbolka);
   fotbolka.forEach((element) => {
     let card = document.createElement("div");
     card.classList.add("card");
+    drawPaginationButtons();
     card.innerHTML = `<img src="https://storage.fabrikamaek.ru/images/0/1/1525/1525399/previews/people_16_womanshortfull_back_white_500.jpg"><div class ="card-title"><h4>${element.name}</h4>
     <h2>${element.number}</h2></div>
     <div class = "card-btn">
@@ -117,4 +126,28 @@ function saveEdit(editedProduct, id) {
 btnClose.addEventListener("click", () => {
   modal.style.display = "none";
   container.style.display = "block";
+});
+
+function drawPaginationButtons() {
+  fetch(`${API}?q=${searchVal}`)
+    .then((res) => res.json())
+    .then((data) => {
+      pageTotalCount = Math.ceil(data.length / 3);
+    });
+}
+
+previous.addEventListener("click", () => {
+  if (currentPage <= 1) {
+    return;
+  }
+  currentPage--;
+  render();
+});
+
+next.addEventListener("click", () => {
+  if (currentPage >= pageTotalCount) {
+    return;
+  }
+  currentPage++;
+  render();
 });
