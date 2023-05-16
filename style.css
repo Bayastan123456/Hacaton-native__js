@@ -113,6 +113,7 @@ body {
   align-items: center;
   background-color: #021927;
   padding: 50px;
+  display: none;
 }
 
 .modal > input {
@@ -130,7 +131,6 @@ body {
   background-color: #9f3b38;
   color: #f0ddca;
 }
-
 .btns {
   display: flex;
   justify-content: center;
