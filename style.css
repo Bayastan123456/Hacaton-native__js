@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   height: 50px;
-  background-color: gray;
+  background-color: #422e3b;
 }
 
 .navbar > input {
@@ -21,14 +21,40 @@
 .navbarbtn > button {
   height: 50px;
   width: 150px;
+  background-color: #f0ddca;
+  color: rgba(0, 0, 0, 0.617);
+  font-family: "Lucida Sans", sans-serif;
+  font-size: 17px;
 }
 
 .title {
   font-family: "Lexend Exa", sans-serif;
   font-weight: bolder;
-  font-size: 250px;
+  font-size: 220px;
+  color: #f0ddca;
 }
 
-.container {
-  margin: 0 auto;
+body {
+  background-color: #6d242e;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inp-name {
+  width: 50%;
+  padding: 8px;
+  margin: 10px;
+  margin-top: 180px;
+  border-radius: 15px;
+}
+
+.inp-number {
+  width: 50%;
+  padding: 8px;
+  margin: 10px;
+  border-radius: 15px;
 }
