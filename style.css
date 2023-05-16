@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  background-color: gray;
+}
+
+.navbar > input {
+  width: 70%;
+  border: 2px solid white;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navbarbtn > button {
+  height: 50px;
+  width: 150px;
+}
+
+.title {
+  font-family: "Lexend Exa", sans-serif;
+  font-weight: bolder;
+  font-size: 250px;
+  line-height: 250px;
+}
