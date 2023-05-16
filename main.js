@@ -5,7 +5,7 @@ let number = document.querySelector(".inp-number");
 let btnCreate = document.querySelector(".create-btn");
 
 let editName = document.querySelector(".inp-modal-name");
-let editNumber = document.querySelector("inp-modal-number");
+let editNumber = document.querySelector(".inp-modal-number");
 
 let list = document.querySelector(".list");
 
@@ -14,6 +14,8 @@ let searchVal = "";
 
 let modal = document.querySelector(".modal");
 let container = document.querySelector(".container");
+let btnSave = document.querySelector(".add-modal");
+let btnClose = document.querySelector(".close-modal");
 
 btnCreate.addEventListener("click", async function () {
   if (!name.value.trim() || !number.value.trim()) {
@@ -76,7 +78,43 @@ async function editElement(id) {
   fetch(`${API}/${id}`)
     .then((res) => res.json())
     .then((data) => {
+      console.log(data.number);
       editName.value = data.name;
       editNumber.value = data.number;
+
+      btnSave.setAttribute("id", id);
     });
 }
+btnSave.addEventListener("click", function () {
+  let id = this.id;
+  let name = editName.value;
+  let number = editNumber.value;
+
+  if (!name || !number) {
+    return;
+  }
+
+  let editedProduct = {
+    name,
+    number,
+  };
+  saveEdit(editedProduct, id);
+});
+
+function saveEdit(editedProduct, id) {
+  fetch(`${API}/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    body: JSON.stringify(editedProduct),
+  }).then(() => render());
+
+  modal.style.display = "none";
+  container.style.display = "block";
+}
+
+btnClose.addEventListener("click", () => {
+  modal.style.display = "none";
+  container.style.display = "block";
+});
