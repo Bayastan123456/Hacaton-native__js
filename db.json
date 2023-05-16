@@ -1,0 +1,14 @@
+{
+  "product": [
+    {
+      "name": "bayas",
+      "number": "99",
+      "id": 1
+    },
+    {
+      "name": "Magira",
+      "number": "6585",
+      "id": 2
+    }
+  ]
+}

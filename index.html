@@ -7,29 +7,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans&family=Lexend+Exa:wght@900&family=Montserrat:wght@400;500&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans&family=Lexend+Exa:wght@900&family=Montserrat:wght@400;500&family=UnifrakturCook:wght@700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="navbar">
-      <img src="https://static.thenounproject.com/png/5150865-200.png" alt="" />
-      <input type="text" placeholder="SEARCH" class="navbar-inp" />
-      <div class="navbarbtn">
-        <button class="navbar-btn">Sign in</button>
-        <button class="navbar-btn">Sign up</button>
+    <div class="container">
+      <div class="navbar">
+        <img
+          src="https://static.thenounproject.com/png/5150865-200.png"
+          alt=""
+        />
+        <input type="text" placeholder="SEARCH" class="navbar-inp" />
+        <div class="navbarbtn">
+          <button class="navbar-btn">Sign in</button>
+          <button class="navbar-btn">Sign up</button>
+        </div>
       </div>
+      <h1 class="title">Create your t-shirt</h1>
+      <div class="content">
+        <input
+          maxlength="7"
+          type="text"
+          placeholder="your name here"
+          class="inp-name"
+        />
+        <input
+          maxlength="4"
+          type="text"
+          placeholder="your favorite number here"
+          class="inp-number"
+        />
+        <button class="create-btn">ADD</button>
+      </div>
+      <div class="list"></div>
     </div>
-    <h1 class="title">Create your t-shirt</h1>
-    <div class="content">
-      <input type="text" placeholder="your name here" class="inp-name" />
+    <div class="modal">
       <input
-        type="number"
-        placeholder="your favorite number here"
-        class="inp-number"
+        maxlength="7"
+        type="text"
+        placeholder="your name here"
+        class="inp-modal-name"
       />
+      <input
+        maxlength="4"
+        type="text"
+        placeholder="your favorite number here"
+        class="inp-modal-number"
+      />
+      <button class="add-modal">ADD</button>
+      <button class="close-modal">CLOSE</button>
     </div>
     <script src="./main.js"></script>
   </body>
