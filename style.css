@@ -121,3 +121,7 @@ body {
   background-color: #9f3b38;
   color: #f0ddca;
 }
+
+.container {
+  display: none;
+}
