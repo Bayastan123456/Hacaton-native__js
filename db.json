@@ -1,9 +1,29 @@
 {
   "product": [
     {
-      "name": "Magira",
-      "number": "8888",
+      "name": "Meerim",
+      "number": "23",
       "id": 2
+    },
+    {
+      "name": "nurbek",
+      "number": "01",
+      "id": 3
+    },
+    {
+      "name": "hgiyg",
+      "number": "4654",
+      "id": 4
+    },
+    {
+      "name": "Aktilek",
+      "number": "7",
+      "id": 5
+    },
+    {
+      "name": "vlad",
+      "number": "3453",
+      "id": 6
     }
   ]
 }
