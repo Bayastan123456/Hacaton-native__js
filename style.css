@@ -104,6 +104,7 @@ body {
   align-items: center;
   background-color: #422e3b;
   padding: 50px;
+  display: none;
 }
 
 .modal > input {
@@ -120,8 +121,4 @@ body {
   padding: 8px;
   background-color: #9f3b38;
   color: #f0ddca;
-}
-
-.container {
-  display: none;
 }
