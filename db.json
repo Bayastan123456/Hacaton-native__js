@@ -1,28 +1,33 @@
 {
   "product": [
     {
-      "name": "Meerim",
-      "number": "23",
+      "name": "Aidar",
+      "number": "25",
+      "id": 1
+    },
+    {
+      "name": "bayas",
+      "number": "5",
       "id": 2
     },
     {
-      "name": "nurbek",
-      "number": "01",
+      "name": "jasmina",
+      "number": "99",
       "id": 3
     },
     {
-      "name": "hgiyg",
-      "number": "4654",
+      "name": "Akti",
+      "number": "52",
       "id": 4
     },
     {
-      "name": "Aktilek",
-      "number": "7",
+      "name": "Magira",
+      "number": "8",
       "id": 5
     },
     {
-      "name": "vlad",
-      "number": "3453",
+      "name": "Islam",
+      "number": "44",
       "id": 6
     }
   ]

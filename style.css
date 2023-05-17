@@ -6,10 +6,12 @@
 
 .navbar {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   height: 50px;
   background-color: #021927;
-  /* position: fixed; */
+  position: fixed;
+  z-index: 4;
 }
 
 button {
@@ -90,7 +92,7 @@ body {
 }
 .card-title > h4 {
   font-size: 45px;
-  width: 200px;
+  width: 215px;
 }
 .card-title > h2 {
   font-size: 70px;
@@ -147,4 +149,166 @@ body {
 .btns > button:hover {
   transition: 0.6s;
   background-color: #9f3b38;
+}
+
+.card-btn > button {
+  width: 20%;
+  padding: 8px;
+}
+
+@media all and (max-width: 1468px) {
+  .title {
+    font-size: 172px;
+  }
+}
+
+@media all and (max-width: 1312px) {
+  .title {
+    font-size: 143px;
+  }
+}
+
+@media all and (max-width: 1186px) {
+  .navbarbtn > button {
+    width: 124px;
+  }
+}
+
+@media all and (max-width: 1088px) {
+  .title {
+    font-size: 123px;
+  }
+  .navbar > input {
+    width: 60%;
+  }
+}
+
+@media all and (max-width: 996px) {
+  .btns > button {
+    width: 8%;
+  }
+}
+
+@media all and (max-width: 942px) {
+  .title {
+    font-size: 106px;
+  }
+}
+
+@media all and (max-width: 866px) {
+  .navbarbtn > button {
+    width: 100px;
+  }
+}
+
+@media all and (max-width: 819px) {
+  .title {
+    font-size: 96px;
+  }
+  .navbarbtn > button {
+    width: 90px;
+  }
+  .btns > button {
+    width: 11%;
+  }
+}
+
+@media all and (max-width: 727px) {
+  .title {
+    font-size: 83px;
+  }
+}
+
+@media all and (max-width: 665px) {
+  .navbar > input {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 643px) {
+  .title {
+    font-size: 70px;
+  }
+}
+
+@media all and (max-width: 542px) {
+  .title {
+    font-size: 62px;
+  }
+  .navbarbtn > button {
+    display: none;
+  }
+  .inp-name {
+    margin-top: 104px;
+  }
+  .navbar > input {
+    width: 76%;
+  }
+  .btns > button {
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .title {
+    font-size: 54px;
+  }
+  .navbar {
+    height: 42px;
+  }
+}
+
+@media all and (max-width: 439px) {
+  .card-title > h4 {
+    width: 159px;
+  }
+}
+
+@media all and (max-width: 423px) {
+  .title {
+    font-size: 46px;
+  }
+  .navbar {
+    height: 36px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .card-title > h4 {
+    width: 122px;
+  }
+}
+
+@media all and (max-width: 361px) {
+  .card-title > h4 {
+    width: 97px;
+  }
+}
+
+@media all and (max-width: 353px) {
+  .title {
+    font-size: 39px;
+  }
+  .card-title > h4 {
+    font-size: 40px;
+    width: 79px;
+  }
+  .card-title > h2 {
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .inp-name {
+    width: 67%;
+  }
+  .inp-number {
+    width: 67%;
+  }
+  .create-btn {
+    width: 67%;
+  }
+  .btns > button {
+    width: 26%;
+  }
 }
