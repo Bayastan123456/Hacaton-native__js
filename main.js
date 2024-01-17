@@ -1,4 +1,4 @@
-let API = "http://localhost:8000/product";
+let API = "https://api-magira.onrender.com/product";
 
 let name = document.querySelector(".inp-name");
 let number = document.querySelector(".inp-number");
